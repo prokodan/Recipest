@@ -7,11 +7,15 @@
 
 import UIKit
 
-class RecipesTableViewController: UITableViewController {
+class RecipesTableViewController: UITableViewController, getContactProtocol {
 
+    var data: [DataBase] = []
+    lazy var recipe: [Recipe] = getRecipies(for: data)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -21,25 +25,48 @@ class RecipesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    internal func getRecipies(for data: [DataBase]) -> [Recipe] {
 
+        var recipies: [Recipe] = []
+        let iterCount = data.count
+        
+        for sData in data[0..<iterCount].flatMap({ $0.recipe}) {
+            recipies.append(sData)
+        }
+        return recipies
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        recipe.count
     }
-
-    /*
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        140
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
+        let recipe = recipe[indexPath.row]
+        
+        
+        var content = cell.defaultContentConfiguration()
+        content.image = UIImage(named: recipe.image)
+        content.text = recipe.name
+        content.textProperties.adjustsFontSizeToFitWidth = true
+        content.imageToTextPadding = CGFloat(8)
+        content.secondaryText = recipe.description
+        content.image = UIImage(named: recipe.image)
+        content.imageProperties.maximumSize.height = CGFloat(140)
+        content.imageProperties.maximumSize.width = CGFloat(140)
+        content.imageProperties.cornerRadius = CGFloat(8)
+        
+        
+        cell.contentConfiguration = content
+        cell.selectionStyle = .none
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

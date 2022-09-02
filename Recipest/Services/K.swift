@@ -12,7 +12,7 @@ struct K {
     
     static let authorPicture = "authorPicture"
     
-    let cell = "RecipeCell"
+    static let cell = "RecipeCell"
     
     
     
@@ -34,5 +34,11 @@ enum RecipesPhoto: String {
     case pumpkinpie = "TykvennyiPirog"
     case honeypie = "medovik"
     case souffle = "sufle"
+    
+}
+
+enum SegueIdentifier: String {
+    case greettotab = "toTabBar"
+    case greettoauthor = "toAuthor"
     
 }

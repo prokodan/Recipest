@@ -89,8 +89,8 @@
 		9E87A38B28BBB0C700F3F478 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E87A37B28BBB0A200F3F478 /* GreetingViewController.swift */,
 				9E87A39A28BBD97200F3F478 /* AuthorViewController.swift */,
+				9E87A37B28BBB0A200F3F478 /* GreetingViewController.swift */,
 				9E87A39C28BBD9B500F3F478 /* TabBarViewController.swift */,
 				9E87A3A028BBDA4900F3F478 /* CategoriesTableViewController.swift */,
 				9E87A3A228BBDA8600F3F478 /* RecipesTableViewController.swift */,

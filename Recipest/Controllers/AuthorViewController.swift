@@ -10,7 +10,7 @@ import UIKit
 class AuthorViewController: UIViewController {
 
     
-    let author = Author.getAuthorName()
+    var author: Author!
     
     @IBOutlet var authorFullNameLabel: UILabel!
     @IBOutlet var jobTitleLabel: UILabel!

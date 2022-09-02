@@ -18,6 +18,7 @@ struct Author {
     var fullName: String {
         "\(name) \(surname)"
     }
+    
 }
 
 extension Author {

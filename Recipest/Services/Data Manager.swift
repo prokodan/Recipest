@@ -9,13 +9,14 @@ import Foundation
 
 class DataManager {
     
+    
     static let shared = [DataBase(name: .firstСourse, recipe: [
         Recipe(
         id: 1,
         category: .firstСourse,
         cuisine: .slavic,
         name: "Борщ",
-        description: " род щей, похлёбка из квашеной свёклы, на говядине и свинине, или со свиным салом. Традиционное блюдо восточных славян, основное первое блюдо украинской кухни.",
+        description: "Род щей, похлёбка из квашеной свёклы, на говядине и свинине, или со свиным салом. Традиционное блюдо восточных славян, основное первое блюдо украинской кухни.",
         image: RecipesPhoto.borsch.rawValue,
         ingrediets: [
                      Ingredients(ingredient: "Капуста белокачанная", count: "300 гр"),
@@ -282,11 +283,12 @@ class DataManager {
                          ])
                          
                          
+                    
+                         
             
     
     ]
     
-  
     
     private init() {}
 }
