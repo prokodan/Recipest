@@ -115,38 +115,254 @@
             <objects>
                 <viewController id="4w8-GQ-orH" customClass="RecipeViewController" customModule="Recipest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DTf-IN-L9s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1242"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6R-uN-sMA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1242"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6R-uN-sMA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1312"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-Um-Unc">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="1146"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-Um-Unc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1312"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUF-D9-s3d">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="330" id="gol-10-Ryw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEM-Qv-PxV">
+                                                <rect key="frame" x="0.0" y="280" width="414" height="50"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y3k-Mi-RLP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="cut-Gn-w1j" userLabel="TandSstackView">
+                                                            <rect key="frame" x="1" y="7" width="412" height="37.5"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nQX-qw-Rpo">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="139.5" height="37.5"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4rW-os-ibP">
+                                                                            <rect key="frame" x="0.0" y="0.5" width="36.5" height="36.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="4rW-os-ibP" secondAttribute="height" multiplier="50:51" id="kqg-Cv-QoM"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 мин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgt-wP-qni">
+                                                                            <rect key="frame" x="44.5" y="0.0" width="95" height="37.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="95" id="gJM-Aq-kNd"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="22"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tma-TU-Eat">
+                                                                    <rect key="frame" x="298.5" y="0.0" width="113.5" height="37.5"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kcN-1i-qFe">
+                                                                            <rect key="frame" x="0.0" y="1.5" width="35.5" height="34.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="kcN-1i-qFe" secondAttribute="height" multiplier="50:53" id="cPU-wG-cXD"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 - 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdZ-c3-EHi">
+                                                                            <rect key="frame" x="43.5" y="0.0" width="70" height="37.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="70" id="Gqv-Gn-QaU"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="22"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="cut-Gn-w1j" secondAttribute="trailing" constant="1" id="193-qn-B08"/>
+                                                        <constraint firstItem="cut-Gn-w1j" firstAttribute="leading" secondItem="y3k-Mi-RLP" secondAttribute="leading" constant="1" id="FgD-o9-Rfw"/>
+                                                    </constraints>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kp5-3C-c8A"/>
+                                                </constraints>
+                                                <blurEffect style="systemUltraThinMaterialLight"/>
+                                            </visualEffectView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="qKp-be-mvz">
+                                                <rect key="frame" x="8" y="338" width="398" height="183.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-fp-cbF" userLabel="Name nad Cousine StackView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="82"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мясо по французски" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkn-yO-5G0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="257" height="82"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="257" id="PYa-fx-3M4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="35"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Европейская кухня" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmg-f3-bGo">
+                                                                <rect key="frame" x="265" y="0.0" width="133" height="82"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="133" id="Tud-ii-OAA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bbz-Xi-h8p" userLabel="Difficulty and Category StackView">
+                                                        <rect key="frame" x="0.0" y="93" width="398" height="23.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Сложность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-MT-ddu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Очень легко" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-ob-apE">
+                                                                <rect key="frame" x="103" y="0.0" width="108" height="23.5"/>
+                                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выпечка" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8y-2d-cWG">
+                                                                <rect key="frame" x="219" y="0.0" width="179" height="23.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="179" id="VWQ-mN-7FF"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ингридиенты:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV0-rH-dAX">
+                                                        <rect key="frame" x="0.0" y="127.5" width="398" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="v8B-Df-ieN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xAn-VI-K1n">
+                                                <rect key="frame" x="0.0" y="521.5" width="414" height="275"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="275" id="fVC-AM-yEt"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="55Y-Ni-DWm">
+                                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="55Y-Ni-DWm" id="J0Q-GJ-qpc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способ приготовления:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-x7-Ero">
+                                                <rect key="frame" x="8" y="804.5" width="398" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="6vh-CY-uQp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OrelegaOne-Regular" family="Orelega One" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HfJ-tt-tg8">
+                                                <rect key="frame" x="0.0" y="868.5" width="414" height="494"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="494" id="pul-Mt-qKH"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="methodCell" id="vXY-ya-Q5u">
+                                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXY-ya-Q5u" id="Ayk-9S-LEM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="xAn-VI-K1n" secondAttribute="trailing" id="2UY-7I-xcd"/>
+                                            <constraint firstAttribute="trailing" secondItem="HfJ-tt-tg8" secondAttribute="trailing" id="5En-YZ-hu0"/>
+                                            <constraint firstAttribute="trailing" secondItem="nJ9-x7-Ero" secondAttribute="trailing" constant="8" id="66I-oL-azF"/>
+                                            <constraint firstItem="sEM-Qv-PxV" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" id="Bq2-TP-CiI"/>
+                                            <constraint firstAttribute="trailing" secondItem="KUF-D9-s3d" secondAttribute="trailing" id="FXV-M0-vcG"/>
+                                            <constraint firstItem="xAn-VI-K1n" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" id="GAQ-yq-jTT"/>
+                                            <constraint firstItem="nJ9-x7-Ero" firstAttribute="top" secondItem="xAn-VI-K1n" secondAttribute="bottom" constant="8" symbolic="YES" id="IdF-hA-689"/>
+                                            <constraint firstItem="qkn-yO-5G0" firstAttribute="top" secondItem="cut-Gn-w1j" secondAttribute="bottom" constant="13.5" id="Ifr-7v-aoh"/>
+                                            <constraint firstItem="HfJ-tt-tg8" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" id="KLR-IH-fTZ"/>
+                                            <constraint firstItem="qKp-be-mvz" firstAttribute="top" secondItem="KUF-D9-s3d" secondAttribute="bottom" constant="8" id="QCf-3Q-sQJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="qKp-be-mvz" secondAttribute="trailing" constant="8" id="ViL-Gq-1Ph"/>
+                                            <constraint firstItem="qKp-be-mvz" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" constant="8" id="XLg-51-00c"/>
+                                            <constraint firstItem="KUF-D9-s3d" firstAttribute="top" secondItem="7Hi-Um-Unc" secondAttribute="top" id="kd6-Cq-YgO"/>
+                                            <constraint firstItem="xAn-VI-K1n" firstAttribute="top" secondItem="qKp-be-mvz" secondAttribute="bottom" id="kjO-Q6-wiG"/>
+                                            <constraint firstItem="HfJ-tt-tg8" firstAttribute="top" secondItem="nJ9-x7-Ero" secondAttribute="bottom" constant="8" symbolic="YES" id="l2d-Kf-rZm"/>
+                                            <constraint firstAttribute="bottom" secondItem="HfJ-tt-tg8" secondAttribute="bottom" constant="50.5" id="mB4-U7-6zt"/>
+                                            <constraint firstAttribute="trailing" secondItem="sEM-Qv-PxV" secondAttribute="trailing" id="vbG-uv-iBS"/>
+                                            <constraint firstItem="sEM-Qv-PxV" firstAttribute="top" secondItem="KUF-D9-s3d" secondAttribute="bottom" constant="-50" id="xnu-Sh-qYd"/>
+                                            <constraint firstItem="nJ9-x7-Ero" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" constant="8" id="z6N-h8-DUP"/>
+                                            <constraint firstItem="KUF-D9-s3d" firstAttribute="leading" secondItem="7Hi-Um-Unc" secondAttribute="leading" id="zVD-BR-1sA"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7Hi-Um-Unc" firstAttribute="leading" secondItem="C6R-uN-sMA" secondAttribute="leading" id="IRc-hF-9jA"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Hi-Um-Unc" secondAttribute="trailing" id="SHa-QP-ksE"/>
-                                    <constraint firstAttribute="height" constant="1242" id="a0K-Ec-fjd"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Hi-Um-Unc" secondAttribute="trailing" id="95i-X5-u6S"/>
+                                    <constraint firstItem="7Hi-Um-Unc" firstAttribute="top" secondItem="C6R-uN-sMA" secondAttribute="top" id="OMr-VT-Aw1"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Hi-Um-Unc" secondAttribute="bottom" id="oBq-zR-Mag"/>
+                                    <constraint firstItem="7Hi-Um-Unc" firstAttribute="leading" secondItem="C6R-uN-sMA" secondAttribute="leading" id="xLs-mC-bgx"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jTX-En-h2d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="C6R-uN-sMA" firstAttribute="trailing" secondItem="jTX-En-h2d" secondAttribute="trailing" id="g05-hk-Ad0"/>
-                            <constraint firstItem="C6R-uN-sMA" firstAttribute="leading" secondItem="jTX-En-h2d" secondAttribute="leading" id="jeg-NW-LnP"/>
-                            <constraint firstItem="C6R-uN-sMA" firstAttribute="top" secondItem="DTf-IN-L9s" secondAttribute="top" id="rw1-yW-ySL"/>
+                            <constraint firstItem="C6R-uN-sMA" firstAttribute="trailing" secondItem="jTX-En-h2d" secondAttribute="trailing" id="LfO-ZY-8ps"/>
+                            <constraint firstItem="C6R-uN-sMA" firstAttribute="top" secondItem="jTX-En-h2d" secondAttribute="top" id="Q57-wl-Qub"/>
+                            <constraint firstItem="C6R-uN-sMA" firstAttribute="leading" secondItem="jTX-En-h2d" secondAttribute="leading" id="XE0-xL-bbi"/>
+                            <constraint firstAttribute="bottom" secondItem="C6R-uN-sMA" secondAttribute="bottom" id="qOA-0h-oVQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рецепт" id="Qt1-4H-hgq"/>
-                    <size key="freeformSize" width="414" height="1242"/>
+                    <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outlet property="blurVisualEffectView" destination="sEM-Qv-PxV" id="nXQ-Y7-SbL"/>
+                        <outlet property="heightIngredientsTableView" destination="fVC-AM-yEt" id="tue-YY-TWG"/>
+                        <outlet property="heightMethodTableView" destination="pul-Mt-qKH" id="uBZ-0F-2vX"/>
+                        <outlet property="ingredientsTableView" destination="xAn-VI-K1n" id="4Lg-OY-TD4"/>
+                        <outlet property="methodTableView" destination="HfJ-tt-tg8" id="Cwj-Da-Bhx"/>
+                        <outlet property="recipeCategoryLabel" destination="a8y-2d-cWG" id="VvH-DD-wUT"/>
+                        <outlet property="recipeCookinhTimeLabel" destination="dgt-wP-qni" id="PCb-je-Ldi"/>
+                        <outlet property="recipeCuisineLabel" destination="lmg-f3-bGo" id="gJO-Gz-tIN"/>
+                        <outlet property="recipeDifficultyLabel" destination="bLX-ob-apE" id="VvN-k6-JtP"/>
+                        <outlet property="recipeImage" destination="KUF-D9-s3d" id="Msc-Fo-QGO"/>
+                        <outlet property="recipeNameLabel" destination="qkn-yO-5G0" id="XfG-4F-SLJ"/>
+                        <outlet property="recipeServingsLabel" destination="SdZ-c3-EHi" id="8Qz-Lz-jbr"/>
+                        <outlet property="servingsImageView" destination="kcN-1i-qFe" id="p85-wt-wlk"/>
+                        <outlet property="timeImageView" destination="4rW-os-ibP" id="7oB-Vl-O39"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgq-Us-qTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3927.5362318840585" y="414.50892857142856"/>
+            <point key="canvasLocation" x="3855.0724637681164" y="229.6875"/>
         </scene>
         <!--Рецепты-->
         <scene sceneID="roN-US-F73">
@@ -180,6 +396,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Рецепты" image="fork.knife.circle" catalog="system" id="MN9-Yt-6Vo"/>
+                    <connections>
+                        <outlet property="serchBar" destination="NB3-hQ-kHM" id="WkY-0U-eHO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmb-LN-3Ai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,12 +506,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ocU-zh-MvK"/>
+        <segue reference="3ti-jR-TD3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="authorPicture" width="2071" height="2071"/>
         <image name="fork.knife.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="tuningfork" catalog="system" width="128" height="116"/>
         <image name="woodenTableBackground.jpeg" width="1024" height="683"/>
         <systemColor name="systemBackgroundColor">

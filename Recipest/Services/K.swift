@@ -9,10 +9,12 @@ import Foundation
 
 struct K {
 
-    
+    static let mainSystemFont = "OrelegaOne-Regular"
     static let authorPicture = "authorPicture"
-    
+    static let backgroundPicture = "woodenTableBackground.jpeg"
     static let cell = "RecipeCell"
+    static let mCell = "methodCell"
+    static let iCell = "ingredientCell"
     
     
     

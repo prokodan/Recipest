@@ -9,22 +9,35 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
+    var data: [DataBase] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tabBar.backgroundImage = UIImage(named: "woodenTableBackground.jpeg")
+        
+        navBarSetup()
+        tabBarSetup()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func navBarSetup() {
+        
+        navigationController?.navigationBar.tintColor = UIColor(named: ColorSets.mainSysColor.rawValue)
+        
     }
-    */
+    
+    private func tabBarSetup() {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: K.mainSystemFont, size: 20)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: K.mainSystemFont, size: 20)!], for: .selected)
+        UITabBar.appearance().backgroundImage = UIImage(named: K.backgroundPicture)
+        tabBar.backgroundImage = UIImage(named: K.backgroundPicture)
+//        tabBar.standardAppearance.backgroundImage = UIImage(named: "woodenTableBackground.jpeg")
+        tabBar.items?.first?.title = "Категории"
+        tabBar.items?.last?.title = "Рецепты"
+        
+    }
+    
+    
 
 }

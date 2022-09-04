@@ -15,7 +15,7 @@ struct Recipe {
     let name: String
     let description: String
     let image: String
-    let ingrediets: [Ingredients]
+    let ingredients: [Ingredients]
     let method: [Method]
     let cookingTime: Int
     let servingsMin: Int
@@ -53,10 +53,8 @@ struct Ingredients {
 }
 
 struct Method {
-    var numberOfSteps: Int {
-        description.count
-    }
-    let description: [String]
+    var numberOfStep: Int
+    let description: String
 }
 
 enum Category: String {

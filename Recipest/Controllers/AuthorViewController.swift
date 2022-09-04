@@ -27,7 +27,6 @@ class AuthorViewController: UIViewController {
         imageSetup()
         navBarSetup()
     }
-    
 
     private func labelsSetup() {
         authorFullNameLabel.text = author.fullName
