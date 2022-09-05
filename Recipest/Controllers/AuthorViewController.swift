@@ -12,6 +12,7 @@ class AuthorViewController: UIViewController {
     
     var author: Author!
     
+    @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var authorFullNameLabel: UILabel!
     @IBOutlet var jobTitleLabel: UILabel!
     @IBOutlet var authorPictureImageView: UIImageView!
@@ -30,11 +31,11 @@ class AuthorViewController: UIViewController {
 
     private func labelsSetup() {
         authorFullNameLabel.text = author.fullName
-        authorFullNameLabel.font = .init(name: "OrelegaOne-Regular", size: 20)
+        authorFullNameLabel.font = .init(name: K.mainSystemFont, size: 20)
         authorFullNameLabel.textColor = UIColor(named: ColorSets.mainSysColor.rawValue)
         
         jobTitleLabel.text = author.jobTitle
-        jobTitleLabel.font = .init(name: "OrelegaOne-Regular", size: 14)
+        jobTitleLabel.font = .init(name: K.mainSystemFont, size: 14)
         jobTitleLabel.textColor = UIColor(named: ColorSets.mainSysColor.rawValue)
         
         textsStackView.alignment = .center
@@ -44,6 +45,7 @@ class AuthorViewController: UIViewController {
     private func imageSetup() {
         authorPictureImageView.image = UIImage(named: author.photo)
         authorPictureImageView.layer.cornerRadius = authorPictureImageView.frame.height / 2
+        backgroundImageView.image = UIImage(named: K.backgroundPicture)
     }
     
     private func navBarSetup() {
