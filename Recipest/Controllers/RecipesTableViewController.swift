@@ -9,22 +9,22 @@ import UIKit
 
 class RecipesTableViewController: UITableViewController {
 
-    var data: [DataBase] = []
     var recipe: [Recipe]!
-    var searchData: [DataBase]!
+    var searchData: [Recipe]!
     
-    @IBOutlet var serchBar: UISearchBar!
+    @IBOutlet var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchData = data
+        searchBar.delegate = self
+        searchData = recipe
     }
-      
-
-// MARK: - Table view data source 
+    
+    
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        recipe.count
+        searchData.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -33,7 +33,7 @@ class RecipesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
-        let recipe = recipe[indexPath.row]
+        let recipe = searchData[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.image = UIImage(named: recipe.image)
@@ -49,47 +49,50 @@ class RecipesTableViewController: UITableViewController {
         
         cell.contentConfiguration = content
         cell.selectionStyle = .none
-
+        
         return cell
     }
-
     
-// MARK: - Navigation
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         guard let recipeVC = segue.destination as? RecipeViewController else {return}
-        recipeVC.recipe = recipe[indexPath.row]
+        recipeVC.recipe = searchData[indexPath.row]
     }
 }
 
 //MARK: - SearchBar Methods
-extension RecipesTableViewController: UISearchBarDelegate {
+extension RecipesTableViewController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchData = []
         
         if searchText == "" {
-            searchData = data
+            searchData = recipe
+            self.tableView.reloadData()
         } else {
-            for sData in data {
+            for sRecipe in recipe {
                 var recipiesArray: [Recipe] = []
-                for recipe in sData.recipe {
-                    if recipe.name.lowercased().contains(searchText.lowercased()) {
-                        recipiesArray.append(recipe)
-                    }
+                if sRecipe.name.lowercased().contains(searchText.lowercased()) {
+                    recipiesArray.append(sRecipe)
                 }
                 if !recipiesArray.isEmpty {
-                    searchData.append(DataBase(name: sData.name, recipe: recipiesArray))
+                    searchData.append(contentsOf: recipiesArray)
                 }
             }
+            self.tableView.reloadData()
         }
-        tableView.reloadData()
+        
     }
     
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
+        self.tableView.reloadData()
     }
+    
+    
     
 }

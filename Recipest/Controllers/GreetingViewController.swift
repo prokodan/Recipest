@@ -19,17 +19,21 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
     lazy var recipe: [Recipe] = getRecipies(for: dataManager)
     
     @IBOutlet var numberOfRecipesLabel: UILabel!
-    
+    @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var toRecipiesButton: UIButton!
+    @IBOutlet var authorBarButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI()
+    }
+    
+    private func updateUI() {
+        backgroundImageView.image = UIImage(named: K.backgroundPicture)
+        numberOfRecipesLabel.font = UIFont(name: K.mainSystemFont, size: 35)
         numberOfRecipesLabel.text = refreshNumberOfRecepies()
-    }
-
-    @IBAction func toRecipesButtonTapped(_ sender: UIButton) {
-    }
-    @IBAction func authorBarButtonTapped(_ sender: UIBarButtonItem) {
+        toRecipiesButton.titleLabel?.font = UIFont(name: K.mainSystemFont, size: 35)
+        authorBarButtonItem.tintColor = UIColor(named: ColorSets.mainSysColor.rawValue)
     }
     
     internal func getRecipies(for data: [DataBase]) -> [Recipe] {
@@ -58,9 +62,9 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
         }
         
         switch numberOfRecipies {
-            case 1:
+            case 1, 21, 31, 41, 51, 61, 71, 81, 91, 101:
                 compositeLabel += " и \(numberOfRecipies) рецепт"
-            case 1..<5:
+        case 1..<5, 21..<25, 31..<35, 41..<45, 51..<55, 61..<65, 71..<75, 81..<85, 91..<95, 101..<105:
                 compositeLabel += " и \(numberOfRecipies) рецепта"
             default:
                 compositeLabel += " и \(numberOfRecipies) рецептов"
@@ -78,16 +82,12 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
             for viewController in tabBarVC.viewControllers! {
                 if let categoriesVC = viewController as? CategoriesTableViewController {
                     categoriesVC.data = dataManager
-                    categoriesVC.recipe = recipe
                 } else if let recipesVC = viewController as? RecipesTableViewController {
-                    recipesVC.data = dataManager
                     recipesVC.recipe = recipe
                 }
             
             }
         }
     }
-    
-    
 }
 
