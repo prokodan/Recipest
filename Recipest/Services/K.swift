@@ -15,14 +15,13 @@ struct K {
     static let cell = "RecipeCell"
     static let mCell = "methodCell"
     static let iCell = "ingredientCell"
-    
-    
-    
+  
 }
 
 enum ColorSets: String {
     
     case mainSysColor = "mainSystemFontColor"
+    
 }
 
 enum RecipesPhoto: String {
@@ -40,6 +39,7 @@ enum RecipesPhoto: String {
 }
 
 enum SegueIdentifier: String {
+    
     case greettotab = "toTabBar"
     case greettoauthor = "toAuthor"
     

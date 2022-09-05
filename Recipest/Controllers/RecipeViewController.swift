@@ -38,12 +38,13 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInterface()
-        methodTableView.backgroundView?.backgroundColor = UIColor.gray
-        methodTableView.separatorColor = UIColor(named: ColorSets.mainSysColor.rawValue)
-        methodTableView.sectionIndexColor = UIColor(named: ColorSets.mainSysColor.rawValue)
-        methodTableView.sectionIndexBackgroundColor = UIColor(named: ColorSets.mainSysColor.rawValue)
-        methodTableView.sectionIndexTrackingBackgroundColor = UIColor(named: ColorSets.mainSysColor.rawValue)
+        setupTableVIews()
+
+        navigationItem.title = recipe.name
         
+    }
+    
+    private func setupTableVIews() {
         heightMethodTableView.constant = CGFloat(recipe.method.capacity * 70)
         heightIngredientsTableView.constant = CGFloat(recipe.ingredients.count * 60)
         
@@ -58,12 +59,7 @@ class RecipeViewController: UIViewController {
         methodTableView.separatorStyle = .none
         methodTableView.allowsSelection = false
  //       methodTableView.isScrollEnabled = false
-        
-        
-        navigationItem.title = recipe.name
-        
     }
-    
     
     private func setupInterface() {
         recipeNameLabel.text = recipe.name
@@ -78,7 +74,6 @@ class RecipeViewController: UIViewController {
         recipeCuisineLabel.text = recipe.cuisine.rawValue
         recipeCategoryLabel.text = recipe.category.rawValue
         
-        
         recipeDifficultyLabel.text = recipe.difficulty
         
     }
@@ -86,7 +81,7 @@ class RecipeViewController: UIViewController {
   
 
 }
-
+//MARK: - TableView Methods
 extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -158,12 +153,4 @@ extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
 
-}
-
-extension RecipeViewController {
-    
-    
-    
-    
-    
 }

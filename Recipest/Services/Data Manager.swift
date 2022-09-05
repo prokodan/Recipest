@@ -10,8 +10,9 @@ import Foundation
 class DataManager {
     
     
-    static let shared = [DataBase(name: .firstСourse, recipe: [
-        Recipe(
+    static let shared = [
+                        DataBase(name: .firstСourse, recipe: [
+                            Recipe(
             id: 1,
             category: .firstСourse,
             cuisine: .slavic,
@@ -48,7 +49,7 @@ class DataManager {
             servingsMin: 6,
             servingsMax: 8),
         
-        Recipe(id: 2,
+                            Recipe(id: 2,
                category: .firstСourse,
                cuisine: .slavic,
                name: "Уха",
@@ -77,42 +78,42 @@ class DataManager {
                servingsMin: 5,
                servingsMax: 6),
         
-        Recipe(
-            id: 3,
-            category: .firstСourse,
-            cuisine: .asian,
-            name: "Лагман",
-            description: "Традиционное блюдо Средней Азии. Это суп из баранины или говядины и овощей.Подаётся такой суп с лапшой, желательно домашнейтрадиционное блюдо дунган и уйгур. Корни происхождения лагмана уходят в Китай. На сегодняшний день многие народы Центральной Азии также имеют свои вариации данного блюда. Главной особенностью лагмана является вручную тянутая округлая лапша диаметром около 3 мм.",
-            image: RecipesPhoto.lagman.rawValue,
-            ingredients: [
-                Ingredients(ingredient: "Бараньи ребра", count: "1 кг"),
-                Ingredients(ingredient: "Луковица", count: "1 шт"),
-                Ingredients(ingredient: "Морковь", count: "1 шт"),
-                Ingredients(ingredient: "Болгарский перец", count: "1 шт"),
-                Ingredients(ingredient: "Картошка", count: "3 шт"),
-                Ingredients(ingredient: "Чеснок", count: "3 зубчика"),
-                Ingredients(ingredient: "Томатная паста", count: "1 ч.л."),
-                Ingredients(ingredient: "Лапша", count: "150 гр"),
-                Ingredients(ingredient: "Перец черный", count: "По вкусу")
-            ],
-            method: [Method(numberOfStep: 1, description:
-                                "Мясо помойте, нарежьте на куски. Мякоть порежьте помельче. Лук нарежьте кубиком. Обжарьте мясо в глубокой кастрюле."),
-                     Method(numberOfStep: 2, description:
-                                "Добавьте лук и еще раз обжарьте. Помидоры нарежьте дольками. Перец нарежьте соломкой."),
-                     Method(numberOfStep: 3, description:
-                                "Добавьте в кастрюлю томатную расту. Затем рубленый чеснок, посолите, поперчите. Далее добавьте помидоры и перец."),
-                     Method(numberOfStep: 4, description:
-                                "Морковь нарежьте соломкой, картофель кубиком. Добавьте в кастрюлю и перемешайте."),
-                     Method(numberOfStep: 5, description:
-                                "Залейте горячей водой, доведите до кипения и варите на небольшом огне 40 минут."),
-                     Method(numberOfStep: 6, description:
-                                "Заранее отварите лапшу , выложите в тарелку, сверху положите мясо с овощами и залейте бульоном.")
-            ],
-            cookingTime: 120,
-            servingsMin: 6,
-            servingsMax: 8)
+                            Recipe(
+        id: 3,
+        category: .firstСourse,
+        cuisine: .asian,
+        name: "Лагман",
+        description: "Традиционное блюдо Средней Азии. Это суп из баранины или говядины и овощей.Подаётся такой суп с лапшой, желательно домашнейтрадиционное блюдо дунган и уйгур. Корни происхождения лагмана уходят в Китай. На сегодняшний день многие народы Центральной Азии также имеют свои вариации данного блюда. Главной особенностью лагмана является вручную тянутая округлая лапша диаметром около 3 мм.",
+        image: RecipesPhoto.lagman.rawValue,
+        ingredients: [
+            Ingredients(ingredient: "Бараньи ребра", count: "1 кг"),
+            Ingredients(ingredient: "Луковица", count: "1 шт"),
+            Ingredients(ingredient: "Морковь", count: "1 шт"),
+            Ingredients(ingredient: "Болгарский перец", count: "1 шт"),
+            Ingredients(ingredient: "Картошка", count: "3 шт"),
+            Ingredients(ingredient: "Чеснок", count: "3 зубчика"),
+            Ingredients(ingredient: "Томатная паста", count: "1 ч.л."),
+            Ingredients(ingredient: "Лапша", count: "150 гр"),
+            Ingredients(ingredient: "Перец черный", count: "По вкусу")
+        ],
+        method: [Method(numberOfStep: 1, description:
+                            "Мясо помойте, нарежьте на куски. Мякоть порежьте помельче. Лук нарежьте кубиком. Обжарьте мясо в глубокой кастрюле."),
+                    Method(numberOfStep: 2, description:
+                            "Добавьте лук и еще раз обжарьте. Помидоры нарежьте дольками. Перец нарежьте соломкой."),
+                    Method(numberOfStep: 3, description:
+                            "Добавьте в кастрюлю томатную расту. Затем рубленый чеснок, посолите, поперчите. Далее добавьте помидоры и перец."),
+                    Method(numberOfStep: 4, description:
+                            "Морковь нарежьте соломкой, картофель кубиком. Добавьте в кастрюлю и перемешайте."),
+                    Method(numberOfStep: 5, description:
+                            "Залейте горячей водой, доведите до кипения и варите на небольшом огне 40 минут."),
+                    Method(numberOfStep: 6, description:
+                            "Заранее отварите лапшу , выложите в тарелку, сверху положите мясо с овощами и залейте бульоном.")
+        ],
+        cookingTime: 120,
+        servingsMin: 6,
+        servingsMax: 8)
         
-    ]),
+                        ]),
                          DataBase(name: .secondCourse, recipe: [
                             Recipe(
                                 id: 4,
@@ -318,14 +319,7 @@ class DataManager {
                                 servingsMax: 3)
                             
                          ])
-                         
-                         
-                         
-                         
-                         
-                         
-    ]
-    
+                        ]
     
     private init() {}
 }

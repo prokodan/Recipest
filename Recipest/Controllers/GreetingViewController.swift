@@ -53,9 +53,9 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
         var compositeLabel: String = ""
         
         switch numberOfCategories {
-            case 1:
+            case 1, 21, 31, 41, 51, 61, 71, 81, 91, 101:
                 compositeLabel = "В библиотеке \(numberOfCategories) категория блюд"
-        case 1..<5:
+        case 1..<5, 21..<25, 31..<35, 41..<45, 51..<55, 61..<65, 71..<75, 81..<85, 91..<95, 101..<105:
                 compositeLabel = "В библиотеке \(numberOfCategories) категории блюд"
         default:
                 compositeLabel = "В библиотеке \(numberOfCategories) категорий блюд"

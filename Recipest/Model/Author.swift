@@ -26,8 +26,6 @@ extension Author {
     static func getAuthorName() -> Author {
         
         let author = Author(name: "Данил", surname: "Прокопенко", jobTitle: "Начинающий iOS разработчик", photo: K.authorPicture)
-        
-        
         return author
     }
     

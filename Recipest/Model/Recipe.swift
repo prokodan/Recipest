@@ -22,6 +22,7 @@ struct Recipe {
     let servingsMax: Int
     var servings: String {
         "\(servingsMin) - \(servingsMax)"
+        
     }
     
     var difficulty: String {
@@ -42,33 +43,43 @@ struct Recipe {
 
     
 struct DataBase {
+    
     var name: Category
     var recipe: [Recipe]
+    
 }
 
 
 struct Ingredients {
+    
     let ingredient: String
     let count: String
+    
 }
 
 struct Method {
+    
     var numberOfStep: Int
     let description: String
+    
 }
 
 enum Category: String {
+    
     case firstСourse = "Первое"
     case secondCourse = "Второе"
     case dessert = "Дессерт"
     case bake = "Выпечка"
+    
 }
 
 
 enum Cuisine: String {
+    
     case slavic = "Cлавянская кухня"
     case asian = "Азиатская кухня"
     case west = "Западная кухня"
     case europe = "Европейская кухня"
+    
 }
 

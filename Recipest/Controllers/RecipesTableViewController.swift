@@ -36,11 +36,12 @@ class RecipesTableViewController: UITableViewController {
         let recipe = searchData[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.image = UIImage(named: recipe.image)
+
         content.text = recipe.name
         content.textProperties.adjustsFontSizeToFitWidth = true
         content.imageToTextPadding = CGFloat(8)
         content.secondaryText = recipe.description
+        
         content.image = UIImage(named: recipe.image)
         content.imageProperties.maximumSize.height = CGFloat(140)
         content.imageProperties.maximumSize.width = CGFloat(140)
@@ -84,7 +85,6 @@ extension RecipesTableViewController: UISearchBarDelegate{
             }
             self.tableView.reloadData()
         }
-        
     }
     
     
@@ -92,7 +92,4 @@ extension RecipesTableViewController: UISearchBarDelegate{
         searchBar.endEditing(true)
         self.tableView.reloadData()
     }
-    
-    
-    
 }
