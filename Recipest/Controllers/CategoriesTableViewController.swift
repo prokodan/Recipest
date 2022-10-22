@@ -9,8 +9,10 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
+    //MARK: - Public Properties
     var data: [DataBase] = []
     
+    //MARK: - VC Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,21 +56,18 @@ class CategoriesTableViewController: UITableViewController {
 
         return cell
     }
-    
+  
+    //MARK: - Private Methods
     private func getRecipe(_ indexPath: IndexPath) -> Recipe {
         let recipeOfCategory = data[indexPath.section].recipe[indexPath.row]
         return recipeOfCategory
     }
     
     // MARK: - Navigation
-
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          guard let indexPath = tableView.indexPathForSelectedRow else {return}
          guard let recipeVC = segue.destination as? RecipeViewController else {return}
          recipeVC.recipe = data[indexPath.section].recipe[indexPath.row]
      }
     
-     
-
-     
 }

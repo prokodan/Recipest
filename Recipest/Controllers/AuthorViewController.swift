@@ -8,27 +8,27 @@
 import UIKit
 
 class AuthorViewController: UIViewController {
-
     
-    var author: Author!
-    
+    //MARK: - IBOutlets
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var authorFullNameLabel: UILabel!
     @IBOutlet var jobTitleLabel: UILabel!
     @IBOutlet var authorPictureImageView: UIImageView!
     @IBOutlet var textsStackView: UIStackView!
     @IBOutlet var textsAndPictureStackView: UIStackView!
+
+    //MARK: - Public Properties
+    var author: Author!
     
-    
-    
+    //MARK: - VC Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
         labelsSetup()
         imageSetup()
         navBarSetup()
     }
 
+    //MARK: - Private Methods
     private func labelsSetup() {
         authorFullNameLabel.text = author.fullName
         authorFullNameLabel.font = .init(name: K.mainSystemFont, size: 20)

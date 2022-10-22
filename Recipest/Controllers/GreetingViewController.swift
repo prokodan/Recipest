@@ -10,24 +10,27 @@ import UIKit
 protocol getRecipeProtocol {
     func getRecipies(for data: [DataBase]) -> [Recipe]
 }
+
 class GreetingViewController: UIViewController, getRecipeProtocol {
 
-    
-    
-    var author = Author.getAuthorName()
-    var dataManager = DataManager.shared
-    lazy var recipe: [Recipe] = getRecipies(for: dataManager)
-    
+    //MARK: - IBOutlets
     @IBOutlet var numberOfRecipesLabel: UILabel!
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var toRecipiesButton: UIButton!
     @IBOutlet var authorBarButtonItem: UIBarButtonItem!
     
+    //MARK: - Public Properties
+    var author = Author.getAuthorName()
+    var dataManager = DataManager.shared
+    lazy var recipe: [Recipe] = getRecipies(for: dataManager)
+    
+    //MARK: - VC Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
+    //MARK: - Private Methods
     private func updateUI() {
         backgroundImageView.image = UIImage(named: K.backgroundPicture)
         numberOfRecipesLabel.font = UIFont(name: K.mainSystemFont, size: 35)
@@ -37,7 +40,6 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
     }
     
     internal func getRecipies(for data: [DataBase]) -> [Recipe] {
-
         var recipies: [Recipe] = []
         let iterCount = data.count
         
@@ -72,6 +74,7 @@ class GreetingViewController: UIViewController, getRecipeProtocol {
         return compositeLabel
     }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             case "toAuthor":

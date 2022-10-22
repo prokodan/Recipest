@@ -9,11 +9,14 @@ import UIKit
 
 class RecipesTableViewController: UITableViewController {
 
+    //MARK: - IBOutlets
+    @IBOutlet var searchBar: UISearchBar!
+    
+    //MARK: - Public Properties
     var recipe: [Recipe]!
     var searchData: [Recipe]!
     
-    @IBOutlet var searchBar: UISearchBar!
-    
+    //MARK: - VC methods
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -22,7 +25,6 @@ class RecipesTableViewController: UITableViewController {
     
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searchData.count
     }

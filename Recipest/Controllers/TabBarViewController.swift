@@ -8,20 +8,18 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    
+//MARK: - Public Properties
     var data: [DataBase] = []
     
-    
-    
+    //MARK: - VC Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navBarSetup()
         tabBarSetup()
     }
 
-   
-    
+   //MARK: - Private Methods
     private func navBarSetup() {
         
         navigationController?.navigationBar.tintColor = UIColor(named: ColorSets.mainSysColor.rawValue)

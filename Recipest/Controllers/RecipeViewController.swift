@@ -9,41 +9,38 @@ import UIKit
 
 class RecipeViewController: UIViewController {
 
-    var recipe : Recipe!
-    
-
-
-    
+    //MARK: - IBoutlets - View
     @IBOutlet var ingredientsTableView: UITableView!
-    
     @IBOutlet var methodTableView: UITableView!
-    
     @IBOutlet var blurVisualEffectView: UIVisualEffectView!
-    
     @IBOutlet var timeImageView: UIImageView!
-    
     @IBOutlet var servingsImageView: UIImageView!
-    
-    @IBOutlet var recipeNameLabel: UILabel!
     @IBOutlet var recipeImage: UIImageView!
+    
+    //MARK: - IBOutlets - Labels
+    @IBOutlet var recipeNameLabel: UILabel!
     @IBOutlet var recipeCookinhTimeLabel: UILabel!
     @IBOutlet var recipeServingsLabel: UILabel!
     @IBOutlet var recipeDifficultyLabel: UILabel!
     @IBOutlet var recipeCuisineLabel: UILabel!
     @IBOutlet var recipeCategoryLabel: UILabel!
     
+    //MARK: - IBOutlets - Constraints
     @IBOutlet var heightIngredientsTableView: NSLayoutConstraint!
     @IBOutlet var heightMethodTableView: NSLayoutConstraint!
     
+    //MARK: - Public Properties
+    var recipe : Recipe!
+    
+    //MARK: - VC Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInterface()
         setupTableVIews()
-
         navigationItem.title = recipe.name
-        
     }
     
+    //MARK: - Private Methods
     private func setupTableVIews() {
         heightMethodTableView.constant = CGFloat(recipe.method.capacity * 70)
         heightIngredientsTableView.constant = CGFloat(recipe.ingredients.count * 60)
@@ -77,9 +74,6 @@ class RecipeViewController: UIViewController {
         recipeDifficultyLabel.text = recipe.difficulty
         
     }
-
-  
-
 }
 //MARK: - TableView Methods
 extension RecipeViewController: UITableViewDataSource, UITableViewDelegate {
